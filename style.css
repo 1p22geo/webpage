@@ -65,13 +65,25 @@ header>h1,h3{
     position: absolute;
     z-index: 1;
 }
-    
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
 footer{
     background-color: rgb(54, 54, 54);
     padding: 50px;
     color: aliceblue;
     text-align: center;
+}
+.freq{
+    border: 1px solid black;
+    padding:5px;
+    margin-top: 10px;
+}
+span{
+    display: inline-block;
+    height:100%;
+    text-align: center;
+    padding-bottom: 10px;
+    box-sizing: border-box;
 }

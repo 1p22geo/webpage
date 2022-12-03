@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header>
+        <h1>Discrete Fourier Transform</h1>
+        <button onclick="saveFile()">Download more RAM</button>
+    </header>
+    <div class="container">
+    <section class="spacing"></section>
+    <div>
+    <div class="container">
+        <article>
+            <header><h2>Input information about the dataset here</h2></header>
+            <h4>Sampling frequency [Hz]</h4>
+            <input id="f"/>
+            <h4>Add more harmonic frequencies</h4>
+            <button onclick="addF()">Add another frequency</button>
+            <div id="freqs">
+                <div class="freq">
+                    <h3>Main frequency</h3>
+                    <p>
+                    <span>1 Hz</span><input type="range" min="1" max="100"><span>100 Hz</span>
+                    </p>
+                </div>
+            </div>
+            <br/><br/>
+            <button onclick="evaluate()">Create this dataset</button>
+            <pre id="output"></pre>
+        </article>
+        <article>
+            <header><h2>Your data set</h2></header>
+            
+        </article>
+    </div>
+    <!--div id="graph">
+        <h4>Frequency spectre graph</h4>
+    </div-->
+    </div>
+    <section class="spacing"></section>
+    </div>
+    <footer>Bartosz G 2022<br/><br/><a href="index.html">Decompose those datasets</a></footer>
+    <script src="second.js"></script>
+</body>
+</html>
