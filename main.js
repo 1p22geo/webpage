@@ -317,13 +317,19 @@ function summary(array){
 
 
 document.getElementsByName('inputfile')[0].addEventListener('change', function(){
-  var fr=new FileReader();
+  let fr=new FileReader();
   fr.onload=function(){
     let text = fr.result;
     if(text == ''){return}
     let array = text.split(',');
     summary(array);
     document.getElementById('input').value = text;
+    alert();
+    alert();
+    for (let n = 0; n < array.length; n++) {
+      const element = array[n];
+      alert(n);
+    }
   }
   fr.readAsText(this.files[0]);
   document.getElementsByName('inputfile')[0].value = null;
