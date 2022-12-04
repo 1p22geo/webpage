@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Discrete Fourier Transform</h1>
+        <h1>Data set generator</h1>
         <button onclick="saveFile()">Download more RAM</button>
     </header>
     <div class="container">
@@ -27,6 +27,14 @@
                     <h3>Main frequency</h3>
                     <p>
                     <span>1 Hz</span><input type="range" min="1" max="100"><span>100 Hz</span>
+                    </p>
+                    <h3>Amplitude</h3>
+                    <p>
+                    <span>0%</span><input type="range" min="1" max="100" value="100"><span>100%</span>
+                    </p>
+                    <h3>Phase shift</h3>
+                    <p>
+                    <span>- &pi; rad</span><input type="range" min="1" max="100"><span>&pi; rad</span>
                     </p>
                 </div>
             </div>
