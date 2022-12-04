@@ -66,7 +66,7 @@
     </div>
     <section class="spacing"></section>
     </div>
-    <footer>Bartosz G 2022<br/><br/><a href="second.html">Data set generator</a></footer>
+    <footer>Bartosz G 2022<br/><br/><a href="second.php">Data set generator</a></footer>
     <script src="main.js"></script>
 </body>
 </html>

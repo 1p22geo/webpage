@@ -328,7 +328,7 @@ document.getElementsByName('inputfile')[0].addEventListener('change', function()
   fr.readAsText(this.files[0]);
   document.getElementsByName('inputfile')[0].value = null;
 })
-/*  a couple saved things
+/* 
 
 function saveFile(){
   const link = document.createElement("a");

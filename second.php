@@ -35,7 +35,7 @@
                     </p>
                     <h3>Phase shift</h3>
                     <p>
-                    <span>- &pi; rad</span><input type="range" min="1" max="100" name = "phase"><span>&pi; rad</span>
+                    <span>- &pi; rad</span><input type="range" min="<?php echo (-M_PI)?>" max="<?php echo (M_PI)?>" name = "phase"><span>&pi; rad</span>
                     </p>
                 </div>
             </div>
