@@ -323,10 +323,12 @@ document.getElementsByName('inputfile')[0].addEventListener('change', function()
     if(text == ''){return}
     let array = text.split(',');
     summary(array);
+    document.getElementById('input').value = text;
   }
   fr.readAsText(this.files[0]);
   document.getElementsByName('inputfile')[0].value = null;
 })
+/*  a couple saved things
 
 function saveFile(){
   const link = document.createElement("a");
@@ -345,3 +347,4 @@ link.click();
 URL.revokeObjectURL(link.href);
   
 }
+*/
