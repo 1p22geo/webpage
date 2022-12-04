@@ -32,6 +32,7 @@ function addF(){
     slider.min = 1;
     slider.max = 100;
     slider.value = 50;
+    slider.step = 1;
     p.appendChild(slider);
     text = document.createTextNode('100 Hz');
     p.appendChild(text);
@@ -91,4 +92,22 @@ function saveFile(){
   link.click();
   URL.revokeObjectURL(link.href);
     
+  }
+
+  function calculate(){
+    let samplingF = document.getElementById('f');
+    let N = document.getElementById('N');
+
+    let frequencies = document.getElementsByName('frequency')
+    let amplitudes = document.getElementsByName('amplitude')
+    let phase_shifts = document.getElementsByName('phase')
+
+    let values = [];
+
+    if(!samplingF||!N){return;}
+    for(let timer = 0; timer<N, timer++;){
+        for (let i = 0; i < frequencies.length; i++) {
+            
+        }
+    }
   }

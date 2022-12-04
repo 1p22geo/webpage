@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-file = open('test2.txt','w')
+file = open('cos1000.txt','w')
 x = np.linspace(0,20*np.pi,5000)
 """
 y = []
@@ -12,7 +12,7 @@ for i in x:
     else:
         y.append(-1)
 """
-y = 2*np.cos(2*x)+np.cos(x+2)+0.5*np.sin(5*x)
+y = np.cos(x)
 fig, ax = plt.subplots()
 ax.plot(x, y, linewidth=2.0)
 plt.show()
