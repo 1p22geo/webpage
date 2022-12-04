@@ -58,6 +58,7 @@ header>h1,h3{
     visibility: hidden;
     width: 120px;
     background-color: black;
+    min-height: fit-content;
     color: #fff;
     text-align: center;
     padding: 5px 0;
@@ -68,7 +69,6 @@ header>h1,h3{
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
-
 footer{
     background-color: rgb(54, 54, 54);
     padding: 50px;
@@ -79,11 +79,4 @@ footer{
     border: 1px solid black;
     padding:5px;
     margin-top: 10px;
-}
-span{
-    display: inline-block;
-    height:100%;
-    text-align: center;
-    padding-bottom: 10px;
-    box-sizing: border-box;
 }

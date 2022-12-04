@@ -21,7 +21,7 @@ function addF(){
     fdiv.classList.add('freq');
     let h3 = document.createElement('h3');
     h3.innerHTML = 'Harmonic frequency '+freqCount;
-    freqCount++;
+    
     fdiv.appendChild(h3);
     let p = document.createElement('p');
     let text = document.createTextNode('1 Hz');
@@ -30,11 +30,11 @@ function addF(){
     slider.name = "frequency";
     slider.type = 'range';
     slider.min = 1;
-    slider.max = 100;
+    slider.max = 50;
     slider.value = 50;
     slider.step = 1;
     p.appendChild(slider);
-    text = document.createTextNode('100 Hz');
+    text = document.createTextNode('50 Hz');
     p.appendChild(text);
     fdiv.appendChild(p);
 
@@ -72,7 +72,7 @@ function addF(){
     p.appendChild(text);
     fdiv.appendChild(p);
 
-
+    freqCount++;
     freqsdiv.appendChild(fdiv);
 }
 
@@ -94,20 +94,39 @@ function saveFile(){
     
   }
 
-  function calculate(){
-    let samplingF = document.getElementById('f');
-    let N = document.getElementById('N');
+function calculate(){
+    let samplingF = document.getElementById('f').value;
+    let N = document.getElementById('N').value;
 
-    let frequencies = document.getElementsByName('frequency')
-    let amplitudes = document.getElementsByName('amplitude')
-    let phase_shifts = document.getElementsByName('phase')
+    let frequencies = document.getElementsByName('frequency');
+    let amplitudes = document.getElementsByName('amplitude');
+    let phase_shifts = document.getElementsByName('phase');
 
     let values = [];
 
     if(!samplingF||!N){return;}
-    for(let timer = 0; timer<N, timer++;){
+    //let v = 1//(1/(2*π*(1/samplingF**2)*N));
+    unitF = samplingF/N;
+    for(let sample = 0; sample<N; sample+=1){
+        values[sample] = 0;
         for (let i = 0; i < frequencies.length; i++) {
+            values[sample]+=((amplitudes[i].value)/100)*Math.cos((sample/N)*2*π*((frequencies[i].value)/unitF));
             
         }
     }
-  }
+
+    const link = document.createElement("a");
+
+    // Create a blog object with the file content which you want to add to the file
+    const file = new Blob([values.join(',')], { type: 'text/plain' });
+
+    // Add file content in the object URL
+    link.href = URL.createObjectURL(file);
+
+    // Add file name
+    link.download = "sample.txt";
+
+    // Add click event to <a> tag to save file.
+    link.click();
+    URL.revokeObjectURL(link.href);
+}
