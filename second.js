@@ -67,6 +67,7 @@ function addF(){
     slider.min = -π;
     slider.max = π;
     slider.value = 50;
+    slider.step = 0.01;
     p.appendChild(slider);
     text = document.createTextNode('π rad');
     p.appendChild(text);
@@ -110,7 +111,7 @@ function calculate(){
     for(let sample = 0; sample<N; sample+=1){
         values[sample] = 0;
         for (let i = 0; i < frequencies.length; i++) {
-            values[sample]+=((amplitudes[i].value)/100)*Math.cos(((sample/N)*2*π*((frequencies[i].value)/unitF))+phase_shifts[i]);
+            values[sample]+=((amplitudes[i].value)/100)*Math.cos(((sample/N)*2*π*((frequencies[i].value)/unitF))+Number(phase_shifts[i].value));
             
         }
     }

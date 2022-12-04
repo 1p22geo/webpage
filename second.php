@@ -35,7 +35,7 @@
                     </p>
                     <h3>Phase shift</h3>
                     <p>
-                    <span>- &pi; rad</span><input type="range" min="<?php echo (-M_PI)?>" max="<?php echo (M_PI)?>" name = "phase"><span>&pi; rad</span>
+                    <span>- &pi; rad</span><input type="range" min="<?php echo (-M_PI)?>" max="<?php echo (M_PI)?>" name = "phase" step='0.01'><span>&pi; rad</span>
                     </p>
                 </div>
             </div>
@@ -54,7 +54,7 @@
     </div>
     <section class="spacing"></section>
     </div>
-    <footer>Bartosz G 2022<br/><br/><a href="index.html">Decompose those datasets</a></footer>
+    <footer>Bartosz G 2022<br/><br/><a href="index.php">Decompose those datasets</a></footer>
     <script src="second.js"></script>
 </body>
 </html>
